@@ -1,0 +1,98 @@
+/* Greenlink buyer view design and styling */
+
+:root {
+    /* color - forest/verification palette */
+
+  --gl-forest-950: #0e1f16;
+  --gl-forest-800: #17301f;
+  --gl-forest-600: #35603f;
+  --gl-moss-400: #8fae86;
+  --gl-moss-200: #d7e6d8;
+  --gl-gold-500: #b98a2e;
+  --gl-gold-100: #f2e6cc;
+  --gl-cream-50: #f6f5ef;
+  --gl-ink-900: #16211b;
+  --gl-ink-600: #4c5c52;
+  --gl-white: #ffffff;
+
+  /* semantic aliases */
+
+  --gl-bg: var(--gl-cream-50);
+  --gl-surface: var(--gl-white);
+  --gl-text: var(--gl-ink-900);
+  --gl-text-muted: var(--gl-ink-600);
+  --gl-border: #e3e0d5;
+  --gl-accent: var(--gl-gold-500);
+ 
+  /* Type */
+  --gl-font-display: 'Fraunces', Georgia, serif;
+  --gl-font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* spacing/radius/shadow */
+
+   --gl-radius-sm: 8px;
+  --gl-radius-md: 14px;
+  --gl-radius-lg: 20px;
+  --gl-shadow-sm: 0 2px 8px rgba(14, 31, 22, 0.06);
+  --gl-shadow-md: 0 8px 24px rgba(14, 31, 22, 0.1);
+}  
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--gl-font-body);
+    color: var(--gl-text);
+    background: var(--gl-bg);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--gl-font-display);
+    color: var(--gl-forest-950);
+}
+
+/* reusable page-header pattern */
+
+.gl-page {
+    padding: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gl-eyebrow {
+    font-family: var(--gl-font-body);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    color: var(--gl-gold-500);
+    margin: auto;
+}
+ 
+.gl-page-title{
+    font-family: var(--gl-font-display);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--gl-forest-950);
+    margin: 0;
+}
+
+.gl-page-subtitle{
+   font-family: var(--gl-font-body);
+  font-size: 14px;
+  color: var(--gl-text-muted);
+  margin: auto; 
+}
+
+/* verification seal */
+.gl-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  border: 1.5px solid var(--gl-gold-500);
+  color: var(--gl-gold-500);
+  flex-shrink: 0;
+}
