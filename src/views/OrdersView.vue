@@ -38,11 +38,13 @@ async function changeStatus(order, status) {
     <p class="gl-eyebrow">Order queue</p>
     <h1 class="gl-page-title">Orders</h1>
 
-   <v-progress-circular v-if="sellerStore.loading" indeterminate color="primary" />
-<v-alert v-else-if="sellerStore.loadError" type="error" variant="tonal" density="compact">
-  {{ sellerStore.loadError }}
-</v-alert>
-<v-alert v-else-if="sellerStore.orders.length === 0" type="info" variant="tonal"></v-alert>
+    <v-progress-circular v-if="sellerStore.loading" indeterminate color="primary" />
+    <v-alert v-else-if="sellerStore.loadError" type="error" variant="tonal" density="compact">
+      {{ sellerStore.loadError }}
+    </v-alert>
+    <v-alert v-else-if="sellerStore.orders.length === 0" type="info" variant="tonal">
+      No orders yet.
+    </v-alert>
 
     <v-card v-for="order in sellerStore.orders" :key="order.id" elevation="0" class="gl-order-card">
       <div class="gl-order-top">
